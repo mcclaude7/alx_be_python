@@ -1,4 +1,4 @@
-age = input("How old are you?: ")
+age = input("How old are you? ")
 years_difference = 2050 - 2023
 age_expactation = int(age) + years_difference
 
