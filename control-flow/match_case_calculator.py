@@ -1,6 +1,6 @@
-x = float(input("Enter the first  number:"))
-y = float(input("Enter the second number:"))
-z = input("Chose the operation (+, -, *, /):")
+x = int(input("Enter the first  number:"))
+y = int(input("Enter the second number:"))
+operation = input("Chose the operation (+, -, *, /):")
 
 match operation:
     case ("+"):
@@ -14,4 +14,4 @@ match operation:
             print("the result is",x/y)
         else:
             print("Cannot divide by zero.")
-            
+
