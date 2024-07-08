@@ -34,7 +34,7 @@ def main():
                 for item in shopping_list:
                     print(f"{item}")
             pass
-        elif choice == "exit":
+        elif choice == "4":
             print("Goodbye!")
             break
         else:
