@@ -16,15 +16,15 @@ def main():
         if choice == "1":
             item = input("Enter an item: ")
             shopping_list.append(item)
-            print(f"{item} has been added to the list.")
+            print(f"{item} has been added to the shopping_list.")
             pass
         elif choice == "2":
             item = input("Enter an item you want to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"{item} has been removed to the list.")
+                print(f"{item} has been removed to the shopping_list.")
             else:
-                print(f"{item} was not found in the list")
+                print(f"{item} was not found in the shopping_list")
             pass
         elif choice == "3":
             if not shopping_list:
