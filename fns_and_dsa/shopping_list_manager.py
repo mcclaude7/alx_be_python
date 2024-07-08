@@ -16,10 +16,12 @@ def main():
         if choice == "1":
             item = input("Enter an item: ")
             shopping_list.append(item)
+            print(f"{item} has been added to the list.")
             pass
         elif choice == "2":
             item = input("Enter an item you want to remove: ")
             shopping_list.remove(item)
+            print(f"{item} has been removed to the list.")
             pass
         elif choice == "3":
             if not shopping_list:
@@ -35,6 +37,7 @@ def main():
             print("Invalid choice. Please try again.")
 if __name__== "__main__":
     main()
+    
 
 
 
