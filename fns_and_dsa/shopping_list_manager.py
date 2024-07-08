@@ -20,15 +20,19 @@ def main():
             pass
         elif choice == "2":
             item = input("Enter an item you want to remove: ")
-            shopping_list.remove(item)
-            print(f"{item} has been removed to the list.")
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"{item} has been removed to the list.")
+            else:
+                print(f"{item} was not found in the list")
             pass
         elif choice == "3":
             if not shopping_list:
                 print("The shopping list is empty")
             else:
+                print("Current shopping list:")
                 for item in shopping_list:
-                    print(item)
+                    print(f"{item}")
             pass
         elif choice == "exit":
             print("Goodbye!")
@@ -37,7 +41,7 @@ def main():
             print("Invalid choice. Please try again.")
 if __name__== "__main__":
     main()
-    
+
 
 
 
