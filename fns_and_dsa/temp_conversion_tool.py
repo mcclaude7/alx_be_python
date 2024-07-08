@@ -16,8 +16,10 @@ def main():
     elif unit == "F":
         celsius = convert_to_celsius(temp)
         print(f"{temp}°C is {celsius}°C")
-    else:
+    elif:
         print("Invalid input, please enter C or F")
+    else:
+        print("Invalid temperature. Please enter a numeric value.")
 if __name__ == "__main__":
     main()
 
