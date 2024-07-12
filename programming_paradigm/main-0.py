@@ -1,28 +1,33 @@
+# main-0.py
+
 import sys
 from bank_account import BankAccount
 
 def main():
-    account = BankAccount(100)  # Example starting balance
-    if len(sys.argv) < 2:
-        print("Usage: python main.py <command>:<amount>")
-        print("Commands: deposit, withdraw, display")
-        sys.exit(1)
+    initial_balance = 1000
+    account = BankAccount(initial_balance)
 
-    command, *params = sys.argv[1].split(':')
-    amount = float(params[0]) if params else None
+    while True:
+        print("\nOptions:")
+        print("1. Deposit")
+        print("2. Withdraw")
+        print("3. Display Balance")
+        print("4. Exit")
+        choice = input("Choose an option: ")
 
-    if command == "deposit" and amount is not None:
-        account.deposit(amount)
-        print(f"Deposited: ${amount}")
-    elif command == "withdraw" and amount is not None:
-        if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
+        if choice == '1':
+            amount = float(input("Enter amount to deposit: "))
+            account.deposit(amount)
+        elif choice == '2':
+            amount = float(input("Enter amount to withdraw: "))
+            account.withdraw(amount)
+        elif choice == '3':
+            account.display_balance()
+        elif choice == '4':
+            print("Exiting...")
+            break
         else:
-            print("Insufficient funds.")
-    elif command == "display":
-        account.display_balance()
-    else:
-        print("Invalid command.")
+            print("Invalid option. Please try again.")
 
 if __name__ == "__main__":
     main()
