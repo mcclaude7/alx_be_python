@@ -16,10 +16,10 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == '1':
-            amount = float(input("Enter amount to deposit: "))
+            amount = int(input("Enter amount to deposit: "))
             account.deposit(amount)
         elif choice == '2':
-            amount = float(input("Enter amount to withdraw: "))
+            amount = int(input("Enter amount to withdraw: "))
             account.withdraw(amount)
         elif choice == '3':
             account.display_balance()
