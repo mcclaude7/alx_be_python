@@ -3,9 +3,9 @@ def safe_divide(numerator, denominator):
         num = float(numerator)
         den = float(denominator)
         if den == 0:
-            raise ZeroDivisionError("Error: Division by zero is not allowed.") 
+            raise ZeroDivisionError("Error: Can not divide by zero.") 
         return num / den
     except ValueError:
-        return "Error: Non-numeric input detected. Please provide numeric values."
+        return "Error: Please enter numeric value only."
 
 
