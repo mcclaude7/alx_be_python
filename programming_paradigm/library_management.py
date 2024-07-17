@@ -16,7 +16,7 @@ class Book:
     def __str__(self):
         return f"'{self.title}' by {self.author}"
     
-class library:
+class Library:
     def __init__(self):
         self._books = []
 
