@@ -12,7 +12,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"{self.title} by {self.author}, File Size: {self.file_size}kb"
+        return f"{super().__str__}{self.title} by {self.author}, File Size: {self.file_size}kb"
 
 class PrintBook(Book):
     def __init__(self, page_count, title, author):
